@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Height & Weight Estimator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Height & Weight Estimator</h1>
+    <p>Allow camera access and stand far enough away to show your full body.</p>
+
+    <video id="camera" autoplay playsinline muted></video>
+    <canvas id="snapshot" hidden></canvas>
+
+    <div class="controls">
+      <button id="startCamera">Start Camera</button>
+      <button id="capture" disabled>Capture Photo</button>
+    </div>
+
+    <p id="status" role="status">Camera not started.</p>
+    <img id="preview" alt="Captured photo preview" hidden>
+
+    <button id="predict" disabled>Predict Height & Weight</button>
+    <p id="results" aria-live="polite"></p>
+    <p class="note">Predictions are estimates, not verified measurements.</p>
+  </main>
+  <script src="/static/camera.js"></script>
+</body>
+</html>
